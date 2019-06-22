@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-06-17T12:47:28</date>
+  <millis>1560755848665</millis>
+  <sequence>0</sequence>
+  <logger>Amazon</logger>
+  <level>SEVERE</level>
+  <class>com.manoj.AmazonLogger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>HI i am severe</message>
+</record>
+<record>
+  <date>2019-06-17T12:47:28</date>
+  <millis>1560755848714</millis>
+  <sequence>1</sequence>
+  <logger>Amazon</logger>
+  <level>WARNING</level>
+  <class>com.manoj.AmazonLogger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>HI i am warning</message>
+</record>
+<record>
+  <date>2019-06-17T12:47:28</date>
+  <millis>1560755848715</millis>
+  <sequence>2</sequence>
+  <logger>Amazon</logger>
+  <level>INFO</level>
+  <class>com.manoj.AmazonLogger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>HI i am info</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-06-17T12:48:12</date>
+  <millis>1560755892957</millis>
+  <sequence>0</sequence>
+  <logger>Amazon</logger>
+  <level>SEVERE</level>
+  <class>com.manoj.AmazonLogger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>HI i am severe</message>
+</record>
+<record>
+  <date>2019-06-17T12:48:12</date>
+  <millis>1560755892994</millis>
+  <sequence>1</sequence>
+  <logger>Amazon</logger>
+  <level>WARNING</level>
+  <class>com.manoj.AmazonLogger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>HI i am warning</message>
+</record>
+<record>
+  <date>2019-06-17T12:48:12</date>
+  <millis>1560755892994</millis>
+  <sequence>2</sequence>
+  <logger>Amazon</logger>
+  <level>INFO</level>
+  <class>com.manoj.AmazonLogger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>HI i am info</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-06-18T15:40:57</date>
+  <millis>1560852657189</millis>
+  <sequence>0</sequence>
+  <logger>Amazon</logger>
+  <level>SEVERE</level>
+  <class>com.manoj.AmazonLogger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>HI i am severe</message>
+</record>
+<record>
+  <date>2019-06-18T15:40:57</date>
+  <millis>1560852657331</millis>
+  <sequence>1</sequence>
+  <logger>Amazon</logger>
+  <level>WARNING</level>
+  <class>com.manoj.AmazonLogger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>HI i am warning</message>
+</record>
+<record>
+  <date>2019-06-18T15:40:57</date>
+  <millis>1560852657332</millis>
+  <sequence>2</sequence>
+  <logger>Amazon</logger>
+  <level>INFO</level>
+  <class>com.manoj.AmazonLogger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>HI i am info</message>
+</record>
+</log>
