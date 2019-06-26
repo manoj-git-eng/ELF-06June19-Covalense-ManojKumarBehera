@@ -11,11 +11,8 @@ import lombok.extern.java.Log;
 public class TestRead {
 	public static void main(String[] args) {
 
-		FileInputStream fin = null;
 		ObjectInputStream oin = null;
-		try {
-
-			fin = new FileInputStream("Manoj.txt");
+		try (FileInputStream fin = new FileInputStream("Manoj.txt")) {
 
 			oin = new ObjectInputStream(fin);
 			Person p = (Person) oin.readObject();
@@ -32,7 +29,6 @@ public class TestRead {
 			if (oin != null) {
 				try {
 					oin.close();
-					fin.close();
 
 				} catch (IOException i) {
 					log.severe("IO exception");
