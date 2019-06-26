@@ -1,0 +1,40 @@
+1.List of Employees working at deptno 20.
+
+ select * from empp where deptno=20;
+
+2.List of Employees earning more than 2500.
+
+ select * from empp where salary>2500;
+
+3.List of Employees whose job type is software developer.
+
+ select * from empp where jobtype='software developer';
+
+4.List of Employees working at department_number 10,20 and 40.
+
+  select * from empp where deptno IN (10,20,40);
+
+5.List of Employees whose name starts with 'S'.
+
+ select * from empp where fname LIKE 's%';
+
+6.List of Employees whose first_name is having 'L' as second character. 
+
+ select * from empp where fname LIKE '_l%';
+
+
+7.List of Employees whose first_name is having atleast 2 'A' character.
+
+ select * from empp where fname LIKE '%a%a%';
+
+8.List of Employees whose last_name is having 'E' as second last character.
+
+ select * from empp where lname LIKE '%e_';
+
+9.List of Employees who are having exactly 5 characters in their last_name.
+
+ select * from empp where lname LIKE '_____';
+
+10.List of Employees whose salary is between 20000 and 30000.
+
+ select * from empp where salary BETWEEN 20000 AND 30000;

@@ -1,0 +1,40 @@
+1. WAQ to display all the details of software developer in dept 30.
+
+select * from employee where job_type='software developer' and deptno=30;
+
+2.  WAQ to display the list for all the software developer in dept no 40 and having salary greater than 5000.
+
+select * from employee where job_type='software developer' and salary>5000;
+
+3.  WAQ to display the list for all the employees except those who are working in dept no 10 and 20.
+
+select * from employee where deptno not in (10,20);
+
+4. WAQ to display the list for all the employees who are not working as software developer and clerks in
+dept no 10 and 20 with a salary in the range of 1000 to 3000.
+
+ select * from employee where job_type not in ('software developer','clerk') and deptno in (10,20) salary between 1000 and 3000;
+
+5. WAQ to display the list for all the employees whose salary is not in the range of 10000 to 20000 in dept no 10,20,30 except all salesman.
+ 
+ select * from employee where salary not between 10000 and 20000 and deptno in (10,20,30) and job_type!='salesman';
+
+6.WAQ to arange all the employees by their salary in descending order.
+
+ select * from employee order by salary DESC;
+
+7.WAQ to display the maximum salary ,minimum salary and total salary from employee.
+
+ select max(salary),min(salary),avg(salary) from employee;
+
+8.WAQ to display the list of the number of software developer in department no 20.
+
+ select * from employee where job_type='software developer' and deptno=20;
+
+9.WAQ to display the list of the highest and lowest salary earned by salesman.
+
+ select max(salary),min(salary) from employee where job_type='salesman';
+
+10.WAQ to display the total salary of all departments.
+
+ select sum(salary) from employee group by deptno;
