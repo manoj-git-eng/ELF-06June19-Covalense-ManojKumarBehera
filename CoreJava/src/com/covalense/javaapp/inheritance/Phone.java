@@ -1,9 +1,10 @@
 package com.covalense.javaapp.inheritance;
 
-public class Phone 
-{
-void call()
-{
-	System.out.println("calling");
-}
+import lombok.extern.java.Log;
+
+@Log
+public class Phone {
+	void call() {
+		log.info("calling");
+	}
 }

@@ -1,13 +1,14 @@
 package com.covalense.javaapp.inheritance;
 
-public class Chips
-{
-	void open()
-	{
-		System.out.println(" opened");
+import lombok.extern.java.Log;
+
+@Log
+public class Chips {
+	void open() {
+		log.info(" opened");
 	}
-	void eat()
-	{
-		System.out.println("Eating");
+
+	void eat() {
+		log.info("Eating");
 	}
 }

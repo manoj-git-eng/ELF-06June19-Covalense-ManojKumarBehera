@@ -1,10 +1,11 @@
 package com.covalense.javaapp.inheritance;
 
-public class Car2 extends Car1
-{
-	void horn()
-	{
-		System.out.println("HORN IS BLOWING");
+import lombok.extern.java.Log;
+
+@Log
+public class Car2 extends Car1 {
+	void horn() {
+		log.info("HORN IS BLOWING");
 
 	}
 }

@@ -7,5 +7,7 @@ public class Test {
 		Iphone i = new Iphone();
 
 		g.recieve(i);
+		g.recieve(m);
+
 	}
 }

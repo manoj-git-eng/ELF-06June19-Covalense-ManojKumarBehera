@@ -1,9 +1,8 @@
 package com.covalense.javaapp.array;
 
 public class MyArray {
-	private Object[] myArray;
+	private Object[] array;
 	private int index;
-	private int temp;
 
 	public MyArray() {
 
@@ -15,31 +14,29 @@ public class MyArray {
 		if (size <= 0) {
 			throw new ArrayIndexOutOfBoundsException("size should be greater than Zero");
 		}
-		myArray = new Object[size];
+		array = new Object[size];
 		index = 0;
 	}// End of Constructor
 
 	public void add(Object val) {
-		myArray[index] = val;
+		array[index] = val;
 		index++;
 	}
 
 	public Object get(int pos) {
 
-		return myArray[pos];
-		
+		return array[pos];
+
 	}
 
 	public void remove(int pos) {
 
-		System.arraycopy(myArray, pos+1, myArray,pos,myArray.length-1-pos);
-		
+		System.arraycopy(array, pos + 1, array, pos, array.length - 1 - pos);
+
 	}
 
 	public int getSize() {
-		return index-1;
+		return index - 1;
 	}
-	
+
 }// End of class
-
-

@@ -1,16 +1,20 @@
 package com.covalense.javaapp.exception;
 
+import lombok.extern.java.Log;
+
+@Log
+
 public class PAYTM {
-	void upi() throws ArithmeticException{
-		System.out.println("UPI got Authorized");
-		//try {
-			System.out.println(10 / 0);
-		/*
-		 * }catch(ArithmeticException e) { System.out.println("Dont divide with zero");
-		 * }
-		 */
+	void upi() throws ArithmeticException {
+		log.info("UPI got Authorized");
 
+		try {
+			log.info("" + 10 / 0);
 
-		System.out.println("Transaction Succesful");
+		} catch (ArithmeticException e) {
+			log.info("Dont divide with zero");
+		}
+
+		log.info("Transaction Succesful");
 	}
 }

@@ -1,10 +1,11 @@
 package com.covalense.javaapp.inheritance;
 
-public class TestDbt 
-{
-public static void main(String[] args) 
-{
-System.out.println("default");	
-}
+import lombok.extern.java.Log;
+
+@Log
+public class TestDbt {
+	public static void main(String[] args) {
+		log.info("default");
+	}
 
 }

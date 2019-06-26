@@ -1,9 +1,11 @@
 package com.covalense.javaapp.casting;
 
-public class Lays extends Chips{
-void eat()
+import lombok.extern.java.Log;
 
-{
-	System.out.println("Eating Lays");
+@Log
+public class Lays extends Chips {
+
+	void eat() {
+		log.info("Eating Lays");
 	}
 }

@@ -6,16 +6,17 @@ import lombok.extern.java.Log;
 public class Pro14 {
 
 	public static void main(String[] args) {
+		String s = "is greater";
 		int a = 12;
 		int b = 14;
 		int c = 17;
 
 		if (a > b && a > c) {
-			log.info(a + " is greater");
+			log.info(a + s);
 		} else if (b > c) {
-			log.info(b + " is greater");
+			log.info(b + s);
 		} else {
-			log.info(c + " is greater");
+			log.info(c + s);
 		}
 	}
 

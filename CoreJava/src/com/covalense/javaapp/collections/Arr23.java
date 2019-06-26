@@ -3,6 +3,9 @@ package com.covalense.javaapp.collections;
 import java.util.LinkedList;
 import java.util.ListIterator;
 
+import lombok.extern.java.Log;
+
+@Log
 public class Arr23 {
 	public static void main(String[] args) {
 		LinkedList a = new LinkedList();
@@ -15,7 +18,7 @@ public class Arr23 {
 		ListIterator lit = a.listIterator();
 		while (lit.hasNext()) {
 			Object o = lit.next();
-			System.out.println(o);
+			log.info(""+o);
 		}
 
 	}

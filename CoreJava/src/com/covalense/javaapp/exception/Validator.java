@@ -1,11 +1,14 @@
 package com.covalense.javaapp.exception;
 
+import lombok.extern.java.Log;
+
+@Log
 public class Validator {
 	void validate(String s) {
 		if (s.length() >= 5) {
-			System.out.println("Name is valid");
+			log.info("Name is valid");
 		} else {
-			System.out.println("INVALID NAME");
+			log.info("INVALID NAME");
 		}
 	}
 }

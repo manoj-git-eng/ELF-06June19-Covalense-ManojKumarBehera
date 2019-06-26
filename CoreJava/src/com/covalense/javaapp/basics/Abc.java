@@ -1,7 +1,7 @@
 package com.covalense.javaapp.basics;
 
 public interface Abc {
-	final String s = "123";
+	final String S = "123";
 
 	void xyz();
 

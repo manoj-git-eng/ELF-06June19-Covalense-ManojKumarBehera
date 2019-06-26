@@ -2,10 +2,13 @@ package com.covalense.javaapp.collections;
 
 import java.util.ArrayList;
 
+import lombok.extern.java.Log;
+
+@Log
 public class TestStudent {
 
 	public static void main(String[] args) {
-		ArrayList<StudentArr> ar = new ArrayList<StudentArr>();
+		ArrayList<StudentArr> ar = new ArrayList<>();
 
 		StudentArr s1 = new StudentArr();
 		s1.name = "Man";
@@ -38,10 +41,10 @@ public class TestStudent {
 
 		for (int i = 0; i < ar.size(); i++) {
 			StudentArr s = ar.get(i);
-			System.out.println("Name is " + s.name);
-			System.out.println("Id is " + s.id);
-			System.out.println("Age is " + s.age);
-			System.out.println("Percentage is " + s.percentage);
+			log.info("Name is " + s.name);
+			log.info("Id is " + s.id);
+			log.info("Age is " + s.age);
+			log.info("Percentage is " + s.percentage);
 		}
 
 	}

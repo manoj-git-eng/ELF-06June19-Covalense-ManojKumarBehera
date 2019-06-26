@@ -1,7 +1,6 @@
 package com.covalense.javaapp.collections;
 
 import java.util.ArrayList;
-import java.util.ListIterator;
 
 import lombok.extern.java.Log;
 @Log

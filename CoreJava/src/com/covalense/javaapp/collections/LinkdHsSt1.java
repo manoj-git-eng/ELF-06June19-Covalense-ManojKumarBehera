@@ -1,25 +1,27 @@
 package com.covalense.javaapp.collections;
 
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 
+import lombok.extern.java.Log;
+
+@Log
 public class LinkdHsSt1 {
 	public static void main(String[] args) {
 
-		LinkedHashSet<String> hs = new LinkedHashSet<String>();
+		LinkedHashSet<String> hs = new LinkedHashSet();
 		hs.add("man");
 		hs.add("hag");
 		hs.add("maq");
 
 		for (String obj : hs) {
-			System.out.println(obj);
+			log.info("" + obj);
 		}
-		System.out.println("***********");
+		log.info("***********");
 		Iterator<String> it = hs.iterator();
 		while (it.hasNext()) {
 			String obj = it.next();
-			System.out.println(obj);
+			log.info("" + obj);
 		}
 
 	}

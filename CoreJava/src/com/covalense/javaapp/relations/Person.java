@@ -1,12 +1,14 @@
 package com.covalense.javaapp.relations;
 
-public class Person 
-{
-	Mobile m=new Mobile();
-	int a=5;
-	void walk()
-	{
-		System.out.println(a);
+import lombok.extern.java.Log;
+
+@Log
+public class Person {
+	Mobile m = new Mobile();
+	int a = 5;
+
+	void walk() {
+		log.info("" + a);
 	}
-	
+
 }

@@ -1,15 +1,15 @@
 package com.covalense.javaapp.encapsulation;
 
-public class DB2 
-{
-	void recieve(Person p)
-	{
+import lombok.extern.java.Log;
 
-		System.out.println("Name is "+p.getName());
-		System.out.println("Age is "+p.getAge());
-		System.out.println("Gender is "+p.getGender());
-		System.out.println("***********************");
-		
-		
+@Log
+public class DB2 {
+	void recieve(Person p) {
+
+		log.info("Name is " + p.getName());
+		log.info("Age is " + p.getAge());
+		log.info("Gender is " + p.getGender());
+		log.info("***********************");
+
 	}
 }

@@ -20,7 +20,7 @@ public class TestPerson {
 			ObjectOutputStream obj = new ObjectOutputStream(fout);
 			obj.writeObject(p);
 			log.info("written ");
-			
+
 			obj.close();
 		} catch (FileNotFoundException e) {
 			log.severe("File not found exception");
@@ -29,6 +29,7 @@ public class TestPerson {
 		} finally {
 			try {
 				fout.close();
+				
 			} catch (IOException e) {
 				log.severe("IO exception");
 			}

@@ -1,10 +1,12 @@
 package com.covalense.javaapp.relations;
 
-public class College
-{
-static Student s=new Student();
-void teach()
-{
-	System.out.println("TEACHING");
-}
+import lombok.extern.java.Log;
+
+@Log
+public class College {
+	static Student s = new Student();
+
+	void teach() {
+		log.info("TEACHING");
+	}
 }

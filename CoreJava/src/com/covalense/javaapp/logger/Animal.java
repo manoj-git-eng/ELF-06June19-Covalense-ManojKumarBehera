@@ -1,18 +1,20 @@
 package com.covalense.javaapp.logger;
 
-public class Animal {
-	
-void sound()
-{
+import lombok.extern.java.Log;
 
-}
-void division(int a, int b)
-{
-	try{
-	int r=a/b;
-	System.out.println(r);}
-	catch(ArithmeticException e) {
-		System.out.println("can not divide with zero");
+@Log
+public class Animal {
+
+	void sound() {	//This method is going to be overridden in child class.
+
 	}
-}
+
+	void division(int a, int b) {
+		try {
+			int r = a / b;
+			log.info("" + r);
+		} catch (ArithmeticException e) {
+			log.info("can not divide with zero");
+		}
+	}
 }

@@ -1,11 +1,13 @@
 package com.covalense.javaapp.casting;
 
-public class Pen
-{
+import lombok.extern.java.Log;
+
+@Log
+public class Pen {
 	int cost;
-	void write()
-	{
-		System.out.println("Writting");
+
+	void write() {
+		log.info("Writting");
 	}
 
 }

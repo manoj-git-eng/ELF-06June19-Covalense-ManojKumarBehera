@@ -1,9 +1,10 @@
 package com.covalense.javaapp.constructor;
 
-public class New 
-{
-	 New()
-	{
-		System.out.println("NEW");
+import lombok.extern.java.Log;
+
+@Log
+public class New {
+	New() {
+		log.info("NEW");
 	}
 }

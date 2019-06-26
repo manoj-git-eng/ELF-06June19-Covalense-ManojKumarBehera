@@ -1,14 +1,15 @@
 package com.covalense.javaapp.inheritance;
 
-public class SciCal extends Cal
-{
+import lombok.extern.java.Log;
 
-	void sin()
-	{
-		System.out.println("SIN");
+@Log
+public class SciCal extends Cal {
+
+	void sin() {
+		log.info("SIN");
 	}
-	void cos()
-	{
-		System.out.println("COS");
+
+	void cos() {
+		log.info("COS");
 	}
 }

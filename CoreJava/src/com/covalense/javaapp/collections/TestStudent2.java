@@ -3,9 +3,12 @@ package com.covalense.javaapp.collections;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import lombok.extern.java.Log;
+
+@Log
 public class TestStudent2 {
 	public static void main(String[] args) {
-		ArrayList<StudentArr> ar = new ArrayList<StudentArr>();
+		ArrayList<StudentArr> ar = new ArrayList<>();
 
 		StudentArr s1 = new StudentArr();
 		s1.name = "Man";
@@ -39,7 +42,7 @@ public class TestStudent2 {
 		Iterator<StudentArr> itr = ar.iterator();
 		while (itr.hasNext()) {
 			StudentArr s = itr.next();
-			System.out.println(s);
+			log.info("" + s);
 		}
 
 	}

@@ -2,6 +2,9 @@ package com.covalense.javaapp.collections;
 
 import java.util.LinkedList;
 
+import lombok.extern.java.Log;
+
+@Log
 public class Arr20 {
 	public static void main(String[] args) {
 		LinkedList a = new LinkedList();
@@ -13,7 +16,7 @@ public class Arr20 {
 
 		for (int i = 0; i < a.size(); i++) {
 			Object o = a.get(i);
-			System.out.println(o);
+			log.info("" + o);
 		}
 
 	}

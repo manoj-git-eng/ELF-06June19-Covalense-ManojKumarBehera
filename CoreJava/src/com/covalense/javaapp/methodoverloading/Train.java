@@ -1,21 +1,22 @@
 package com.covalense.javaapp.methodoverloading;
 
-public class Train 
-{
-	void search(String s)
-	{
-		System.out.println("Searching by name");
-		System.out.println(s);
+import lombok.extern.java.Log;
+
+@Log
+public class Train {
+	void search(String s) {
+		log.info("Searching by name");
+		log.info(s);
 	}
-	void search(int n)
-	{
-		System.out.println("Searching by number");
-		System.out.println(n);
+
+	void search(int n) {
+		log.info("Searching by number");
+		log.info(""+n);
 	}
-	void search(String s,int n)
-	{
-		System.out.println("Searching by name & number");
-		System.out.println(s);
-		System.out.println(n);
+
+	void search(String s, int n) {
+		log.info("Searching by name & number");
+		log.info(s);
+		log.info(""+n);
 	}
 }

@@ -3,11 +3,14 @@ package com.covalense.javaapp.collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import lombok.extern.java.Log;
+
+@Log
 public class LinkedHSMap {
 
 	public static void main(String[] args) {
 
-		LinkedHashMap<String, Integer> l = new LinkedHashMap<String, Integer>();
+		LinkedHashMap<String, Integer> l = new LinkedHashMap<>();
 
 		l.put("One", 1);
 		l.put("Two", 2);
@@ -18,9 +21,9 @@ public class LinkedHSMap {
 			String key = e.getKey();
 			Integer i = e.getValue();
 
-			System.out.println("Key is " + key);
-			System.out.println("value is " + i);
-			System.out.println("**************");
+			log.info("Key is " + key);
+			log.info("value is " + i);
+			log.info("**************");
 
 		}
 

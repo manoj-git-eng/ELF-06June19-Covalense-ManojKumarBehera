@@ -1,9 +1,10 @@
 package com.covalense.javaapp.inheritance;
 
-public class Animal1 
-{
-	void eat()
-	{
-		System.out.println("Eating");
+import lombok.extern.java.Log;
+
+@Log
+public class Animal1 {
+	void eat() {
+		log.info("Eating");
 	}
 }

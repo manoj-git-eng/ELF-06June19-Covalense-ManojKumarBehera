@@ -1,11 +1,11 @@
 package com.covalense.javaapp.inheritance;
 
-public class Cow extends Animal1
-{
-	void food()
-	{
-		System.out.println("Grass");
-	}
+import lombok.extern.java.Log;
 
+@Log
+public class Cow extends Animal1 {
+	void food() {
+		log.info("Grass");
+	}
 
 }

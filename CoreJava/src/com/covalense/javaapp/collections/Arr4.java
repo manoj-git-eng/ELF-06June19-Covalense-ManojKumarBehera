@@ -3,6 +3,9 @@ package com.covalense.javaapp.collections;
 import java.util.ArrayList;
 import java.util.ListIterator;
 
+import lombok.extern.java.Log;
+
+@Log
 public class Arr4 {
 	public static void main(String[] args) {
 		ArrayList a = new ArrayList();
@@ -11,12 +14,12 @@ public class Arr4 {
 		a.add('A');
 		a.add("Manoj");
 
-		ListIterator li = a.listIterator(a.size()); //giving the pointing index
+		ListIterator li = a.listIterator(a.size()); // giving the pointing index
 
 		while (li.hasPrevious()) {
 
 			Object obj = li.previous();
-			System.out.println(obj);
+			log.info("" + obj);
 		}
 
 	}

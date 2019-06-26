@@ -33,7 +33,7 @@ public class TestRead {
 				try {
 					oin.close();
 					fin.close();
-					
+
 				} catch (IOException i) {
 					log.severe("IO exception");
 				}

@@ -1,8 +1,10 @@
 package com.covalense.javaapp.collections;
 
-
 import java.util.LinkedList;
 
+import lombok.extern.java.Log;
+
+@Log
 public class Arr21 {
 	public static void main(String[] args) {
 		LinkedList a = new LinkedList();
@@ -12,9 +14,8 @@ public class Arr21 {
 		a.add(2);
 		a.add('a');
 
-		
 		for (Object obj : a) {
-			System.out.println(obj);
+			log.info("" + obj);
 		}
 
 	}

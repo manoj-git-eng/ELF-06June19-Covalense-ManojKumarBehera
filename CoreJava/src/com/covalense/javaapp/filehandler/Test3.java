@@ -1,7 +1,6 @@
 package com.covalense.javaapp.filehandler;
 
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 

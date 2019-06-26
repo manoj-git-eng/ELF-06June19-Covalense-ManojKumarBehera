@@ -3,6 +3,8 @@ package com.covalense.javaapp.collections;
 import java.util.HashSet;
 import java.util.Iterator;
 
+import lombok.extern.java.Log;
+@Log
 public class HashSt1 {
 
 	public static void main(String[] args) {
@@ -13,13 +15,12 @@ public class HashSt1 {
 		hs.add(23.87);
 
 		for (Object obj : hs) {
-			System.out.println(obj);
+			log.info(""+obj);
 		}
-		System.out.println("***********");
 		Iterator it = hs.iterator();
 		while (it.hasNext()) {
 			Object obj = it.next();
-			System.out.println(obj);
+			log.info(""+obj);
 		}
 
 	}

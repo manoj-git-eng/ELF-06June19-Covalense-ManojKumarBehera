@@ -1,11 +1,13 @@
 package com.covalense.javaapp.relations;
 
-public class MusicS 
-{
-	int M=60;
-void play()
-{
-	System.out.println(M+" MUSIC PLAYER");
-}
+import lombok.extern.java.Log;
+
+@Log
+public class MusicS {
+	int m = 60;
+
+	void play() {
+		log.info(m + " MUSIC PLAYER");
+	}
 
 }

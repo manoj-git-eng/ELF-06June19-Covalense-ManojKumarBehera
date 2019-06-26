@@ -1,21 +1,22 @@
 package com.covalense.javaapp.inheritance;
 
-public class Cal
-{
-	void add()
-	{
-		System.out.println("ADDITION");
+import lombok.extern.java.Log;
+
+@Log
+public class Cal {
+	void add() {
+		log.info("ADDITION");
 	}
-	void sub()
-	{
-		System.out.println("SUBSTRACTION");
+
+	void sub() {
+		log.info("SUBSTRACTION");
 	}
-	void mul()
-	{
-		System.out.println("MULTIPLICATION");
+
+	void mul() {
+		log.info("MULTIPLICATION");
 	}
-	void div()
-	{
-		System.out.println("DIVISSION");
+
+	void div() {
+		log.info("DIVISSION");
 	}
 }

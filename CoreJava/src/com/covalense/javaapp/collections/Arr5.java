@@ -2,7 +2,9 @@ package com.covalense.javaapp.collections;
 
 import java.util.ArrayList;
 
+import lombok.extern.java.Log;
 
+@Log
 public class Arr5 {
 	public static void main(String[] args) {
 		ArrayList a = new ArrayList();
@@ -11,7 +13,7 @@ public class Arr5 {
 		a.add('A');
 		a.add("Manoj");
 
-		System.out.println(a);
+		log.info("" + a);
 
 	}
 }

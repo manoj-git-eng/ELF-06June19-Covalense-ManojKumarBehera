@@ -1,8 +1,10 @@
 package com.covalense.javaapp.inheritance;
-public class Mi extends Phone
-{
-	void ret()
-	{
-		System.out.println("Thank you brother");
+
+import lombok.extern.java.Log;
+
+@Log
+public class Mi extends Phone {
+	void ret() {
+		log.info("Thank you brother");
 	}
 }

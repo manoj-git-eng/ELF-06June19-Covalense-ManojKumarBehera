@@ -3,6 +3,9 @@ package com.covalense.javaapp.collections;
 import java.util.Iterator;
 import java.util.TreeSet;
 
+import lombok.extern.java.Log;
+
+@Log
 public class TreeSt2 {
 	public static void main(String[] args) {
 
@@ -12,13 +15,13 @@ public class TreeSt2 {
 		hs.add(35);
 
 		for (Object obj : hs) {
-			System.out.println(obj);
+			log.info("" + obj);
 		}
-		System.out.println("***********");
+		log.info("***********");
 		Iterator it = hs.iterator();
 		while (it.hasNext()) {
 			Object obj = it.next();
-			System.out.println(obj);
+			log.info("" + obj);
 		}
 
 	}

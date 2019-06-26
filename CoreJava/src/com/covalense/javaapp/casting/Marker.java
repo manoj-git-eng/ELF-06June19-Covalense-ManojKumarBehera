@@ -1,10 +1,12 @@
 package com.covalense.javaapp.casting;
 
-public class Marker extends Pen
-{
+import lombok.extern.java.Log;
+
+@Log
+public class Marker extends Pen {
 	double size;
-	void color()
-	{
-		System.out.println("COLOR IS BLACK");
+
+	void color() {
+		log.info("COLOR IS BLACK");
 	}
 }

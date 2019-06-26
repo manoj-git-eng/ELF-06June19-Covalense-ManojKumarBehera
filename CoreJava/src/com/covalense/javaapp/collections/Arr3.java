@@ -3,6 +3,9 @@ package com.covalense.javaapp.collections;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import lombok.extern.java.Log;
+
+@Log
 public class Arr3 {
 	public static void main(String[] args) {
 		ArrayList a = new ArrayList();
@@ -15,7 +18,7 @@ public class Arr3 {
 		while (it.hasNext()) {
 
 			Object obj = it.next();
-			System.out.println(obj);
+			log.info(""+obj);
 		}
 
 	}

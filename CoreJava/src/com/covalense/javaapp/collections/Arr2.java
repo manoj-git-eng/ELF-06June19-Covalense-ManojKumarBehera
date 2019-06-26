@@ -2,6 +2,9 @@ package com.covalense.javaapp.collections;
 
 import java.util.ArrayList;
 
+import lombok.extern.java.Log;
+
+@Log
 public class Arr2 {
 	public static void main(String[] args) {
 		ArrayList a = new ArrayList();
@@ -11,7 +14,7 @@ public class Arr2 {
 		a.add("Manoj");
 
 		for (Object obj : a) {
-			System.out.println(obj);
+			log.info("" + obj);
 		}
 
 	}

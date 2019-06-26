@@ -1,7 +1,6 @@
 package com.covalense.javaapp.array;
 
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 
 import lombok.extern.java.Log;
