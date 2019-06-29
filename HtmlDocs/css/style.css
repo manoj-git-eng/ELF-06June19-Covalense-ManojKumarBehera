@@ -1,0 +1,47 @@
+body{
+    background-image: linear-gradient(to bottom, red);
+    padding: 0%;
+    margin: 0%;
+}
+.heading{
+    background-color: aqua
+}
+#paragraph{
+    padding: 20px;
+    background:rosybrown;
+   
+    font-size: 2em;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: seashell;
+}
+input[type="username"],input[type="password"]
+{
+    height: 40px;
+    width: 200px;
+    font-size: 30px;
+}
+input[type="submit"]{
+    height: 20px;
+    width: 250px;
+}
+#box1{
+background:yellow;
+padding: 60px;
+margin: 50px;
+border: tomato;
+border: #000;
+}
+#inner1{
+height: 50px;
+background: teal;
+width: 50%;
+
+float: right;
+}
+#inner2{
+    height: 50px;
+    background: yellow;
+
+
+    
+    }

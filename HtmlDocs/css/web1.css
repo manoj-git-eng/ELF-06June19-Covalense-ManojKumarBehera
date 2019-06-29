@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    font-size: 20px;
+    width: 100%;
+    background: black;
+}
+ul{
+    margin: 0%;
+}
+li{
+    
+    display: inline;
+}
+ul li a{
+    text-decoration: none;
+    font-size: 25px;
+color: white;
+padding: 10px;
+display: inline-block;
+}
+input{
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    margin: 40px;
+}
+input:hover{
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    margin: 40px;
+    background: lightgreen;
+    box-shadow: 0 0 10px goldenrod;
+}
+input:invalid{
+    background: red;
+}

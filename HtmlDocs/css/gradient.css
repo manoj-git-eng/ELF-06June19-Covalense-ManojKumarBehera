@@ -1,0 +1,10 @@
+body{
+    background-image: linear-gradient(to right, violet,indigo, blue,green,yellow,red,orange);
+}
+img{
+    height: 350px;
+    width: 350px;
+    margin : auto;
+    border-radius: 45%;
+    border: 5px solid rgb(247, 247, 247);
+}
