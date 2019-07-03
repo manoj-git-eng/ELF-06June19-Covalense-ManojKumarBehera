@@ -29,7 +29,7 @@ public class StatementExampleTwo {
 		}
 
 		String query = "insert into Dept_info values(16,'IT');";
-		log.info("values got entered into table. ");
+		log.info("values got inserted into table. ");
 		try {
 			stmt = con.createStatement();
 		} catch (SQLException e) {

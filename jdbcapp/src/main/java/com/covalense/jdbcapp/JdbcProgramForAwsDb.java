@@ -11,40 +11,23 @@ import com.mysql.jdbc.Driver;
 import lombok.extern.java.Log;
 
 @Log
-public final class MyFirstJdbcProgram {
+public final class JdbcProgramForAwsDb {
 	public static void main(String[] args) {
-		Connection con = null;
-		Statement stmt = null;
-		ResultSet rs = null;
+		String dburl1 = "jdbc:mysql://mysqlmanoj.cimuz0lhuexn.ap-south-1.rds.amazonaws.com:3306/mysqlmanoj";
+		String query = "select * from employee_info";
 
-		try {
-			// 1.Load the driver.
-			// java.sql.Driver driver = new com.mysql.jdbc.Driver();
-			//
-			// DriverManager.deregisterDriver(driver);
+		try (Connection con = DriverManager.getConnection(dburl1, "root", "72728888Mm");
+				Statement stmt = con.createStatement();
+				ResultSet rs = stmt.executeQuery(query)) {
+
 			try {
 				Class.forName("com.mysql.jdbc.Driver").newInstance();
 			} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 
-			// 2.Get the db connection.
-			// String dburl1 =
-			// "jdbc:mysql://10.10.13.105:3306/techchefs_db?user=root&password=root";
-			// con = DriverManager.getConnection(dburl1);
-
-			String dburl1 = "jdbc:mysql://localhost:3306/myemployee";
-			con = DriverManager.getConnection(dburl1, "root", "root");
 			log.info("connection impl class ====>" + con.getClass());
 
-			// 3.Issue Sql queries via connection
-
-			String query = "select * from employee_info";
-			stmt = con.createStatement();
-			rs = stmt.executeQuery(query);
-
-			// 4.Process the result returned by sql
 			while (rs.next()) { // start of while
 				log.info("ID ========> " + rs.getInt("Id"));
 				log.info("Name ========> " + rs.getString("Name"));
@@ -63,15 +46,6 @@ public final class MyFirstJdbcProgram {
 
 		} catch (SQLException e) {
 			log.info("error");
-		} /*//log.info("ID ========> " + rs.getInt("Id"));
-				//log.info("Name ========> " + rs.getString("Name"));
-			 * finally { // 5.close all jdbc objects.
-			 * 
-			 * try { if (con != null) { con.close(); } if (stmt != null) { stmt.close(); }
-			 * if (rs != null) { rs.close(); }
-			 * 
-			 * } catch (Exception e2) { log.info("exception"); } }
-			 */
-
+		}
 	}
 }

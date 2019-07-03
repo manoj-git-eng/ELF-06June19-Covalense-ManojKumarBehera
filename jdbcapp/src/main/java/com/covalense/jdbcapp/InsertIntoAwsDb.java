@@ -1,17 +1,13 @@
-package com.covalense.jdbcapp.commons;
+package com.covalense.jdbcapp;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.Date;
 
 import lombok.extern.java.Log;
 
 @Log
-public class StatementExampleFour {
+public class InsertIntoAwsDb {
 	public static void main(String[] args) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -20,9 +16,9 @@ public class StatementExampleFour {
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-			String dburl1 = "jdbc:mysql://localhost:3306/myemployee";
+			String dburl1 = "jdbc:mysql://mysqlmanoj.cimuz0lhuexn.ap-south-1.rds.amazonaws.com:3306/mysqlmanoj";
 
-			con = DriverManager.getConnection(dburl1, "root", "root");
+			con = DriverManager.getConnection(dburl1, "root", "72728888Mm");
 
 			String query = "insert into employee_info values(?,?,?,?,?,?,?,?,?,?,?,?,?);";
 
@@ -52,7 +48,7 @@ public class StatementExampleFour {
 
 			rs = pstmt.executeUpdate();
 
-			log.info("values got entered into table. ");
+			log.info("values got inserted into table. ");
 
 		} catch (Exception e) {
 			log.info("");
