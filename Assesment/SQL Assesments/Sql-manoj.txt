@@ -150,7 +150,17 @@ select name, department, location from emp;
 
 
 31.  Create a trigger which will work before deletion in employee_info table     and create a duplicate copy of the record in another table employee_backup
+DELIMITER $$
 
+CREATE
+    /*[DEFINER = { user | CURRENT_USER }]*/
+    TRIGGER `myemployee`.`valid` BEFORE DELETE
+    ON `myemployee`.`employee_info`
+    FOR EACH ROW BEGIN
+DROP table employee_info;
+    END$$
+
+DELIMITER ;
 
 
 
