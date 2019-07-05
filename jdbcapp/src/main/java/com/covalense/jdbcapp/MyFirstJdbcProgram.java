@@ -30,10 +30,7 @@ public final class MyFirstJdbcProgram {
 			}
 
 			// 2.Get the db connection.
-			// String dburl1 =
-			// "jdbc:mysql://10.10.13.105:3306/techchefs_db?user=root&password=root";
-			// con = DriverManager.getConnection(dburl1);
-
+			
 			String dburl1 = "jdbc:mysql://localhost:3306/myemployee";
 			con = DriverManager.getConnection(dburl1, "root", "root");
 			log.info("connection impl class ====>" + con.getClass());
