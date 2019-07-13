@@ -5,12 +5,12 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
-  <servlet-name>MyFirstServlet</servlet-name>
-  <servlet-class>com.covalense.mywebbapp.servlets.MyFirstServlet</servlet-class>
+  <servlet-name>EmployeeSearchServlet</servlet-name>
+  <servlet-class>com.covalense.mywebbapp.servlets.EmployeeSearchServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-   <servlet-name>MyFirstServlet</servlet-name>
-   <url-pattern>/currentDate</url-pattern>
+   <servlet-name>EmployeeSearchServlet</servlet-name>
+   <url-pattern>/search</url-pattern>
   </servlet-mapping>
 </web-app>
 

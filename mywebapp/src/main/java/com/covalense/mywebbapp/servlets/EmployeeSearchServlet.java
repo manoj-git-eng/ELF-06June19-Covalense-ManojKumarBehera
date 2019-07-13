@@ -27,7 +27,11 @@ public class EmployeeSearchServlet extends HttpServlet {
 		//Send the response to browser.
 		PrintWriter out=resp.getWriter();
 		if(bean==null) {
+			out.print("<HTML>");
+			out.print("<BODY>");
 			out.print("employee not found");
+			out.print("</BODY>");
+			out.print("</HTML>");
 		}else {
 			out.print("<HTML>");
 			out.print("<BODY>");
@@ -46,7 +50,6 @@ public class EmployeeSearchServlet extends HttpServlet {
 			out.print("<br> Salary :"+bean.getSalary());
 			out.print("<br> Manager id :"+bean.getManagerId());
 			out.print("<br> Email :"+bean.getEmail());
-			
 			out.print("</BODY>");
 			out.print("</HTML>");
 			
