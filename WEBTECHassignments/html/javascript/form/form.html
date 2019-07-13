@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    table{
+        background: rgb(48, 203, 241);
+    }
+    button{
+        border-radius: 10%;
+    }
+    input{
+        border-radius: 10%;
+    }
+    h2{
+        color: rgb(243, 34, 34);
+    }
+    </style>
+</head>
+<body>
+    <center>
+        <table border="5" cellspacing="0" cellpadding="50">
+            <tr>
+                <td>
+                        <form action="" role="form">
+                               <center><h2>LOG IN</h2></center> <br><br>
+                        
+                                Email:<input onkeyup="validateForm()" type="email" name="email" placeholder="type your email"><br><br><br><br><br>
+                                Password:<input onkeyup="validateForm()" type="password" name="password" placeholder="type password"><br><br><br><br><br>
+                               Confirm Password:<input onkeyup="validateForm()"  type="password" name="confirmpassword" placeholder="retype password"><br><br><br><br>
+                               <button type="reset">Reset</button>
+                               <button type="submit" name="myButton" id="" disabled>Submit</button>
+                              
+                        
+                            </form>
+                </td>
+            </tr>
+        </table>
+    </center>
+    <script src="form.js"></script>
+</body>
+</html>
