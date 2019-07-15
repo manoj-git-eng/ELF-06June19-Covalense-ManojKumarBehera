@@ -4,13 +4,51 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <context-param>
+  <param-name>movie</param-name>
+  <param-value>Sholey</param-value>
+  </context-param>
   <servlet>
   <servlet-name>EmployeeSearchServlet</servlet-name>
   <servlet-class>com.covalense.mywebbapp.servlets.EmployeeSearchServlet</servlet-class>
+  <init-param>
+  <param-name>actor</param-name>
+  <param-value>Gabbar Singh</param-value>
+  </init-param>
+  </servlet>
+  <servlet>
+  	<servlet-name>RedirectSevlet</servlet-name>
+  	<display-name>RedirectSevlet</display-name>
+  	<description></description>
+  	<servlet-class>com.covalense.mywebbapp.servlets.RedirectSevlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ForwardServlet</servlet-name>
+  	<display-name>ForwardServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.covalense.mywebbapp.servlets.ForwardServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>IncludeServlet</servlet-name>
+  	<display-name>IncludeServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.covalense.mywebbapp.servlets.IncludeServlet</servlet-class>
   </servlet>
   <servlet-mapping>
+  	<servlet-name>RedirectSevlet</servlet-name>
+  	<url-pattern>/RedirectSevlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ForwardServlet</servlet-name>
+  	<url-pattern>/ForwardServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>IncludeServlet</servlet-name>
+  	<url-pattern>/IncludeServlet</url-pattern>
+  </servlet-mapping>
+  <!-- <servlet-mapping>
    <servlet-name>EmployeeSearchServlet</servlet-name>
    <url-pattern>/search</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
 </web-app>
 
