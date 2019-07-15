@@ -1,4 +1,4 @@
-var library=[
+/* var library=[
     {
         id : 1,
         author: 'Billgates',
@@ -20,7 +20,7 @@ console.log(jsonLibrary);
 
 
 var objLibrary =JSON.stringify(jsonLibrary);
-console.log(jsonLibrary);
+console.log(jsonLibrary); */
 
 
 
@@ -83,7 +83,7 @@ alert(dwightSalary.currentAmount()); //$55,000.
 
 dwightSalary.changeBy(1000); //TypeError: undefined is not a function. */
 
-let promise1=new Promise((res,rej)=>{
+/* let promise1=new Promise((res,rej)=>{
     const items = [{id:1,name:'manoj'},{id:2,name:'ayushi'}];
     if(items.length>0){
         res(items);
@@ -107,7 +107,7 @@ let promise3=new Promise((res,rej)=>{
         rej("rejected");
     }
 });
-
+ */
 /* promise.then((data)=>{
     console.log(data);
 }).catch((reason)=>{
@@ -115,7 +115,58 @@ let promise3=new Promise((res,rej)=>{
 }); */
 
 
-PromiseAll.race(promise1,promise2,promise3).then((data)=>{
+/* Promise.race(promise1,promise2,promise3).then((data)=>{
     console.log(data);
 });
+ */
+ var a=10;
+ /*console.log(this);  //window
+console.log(window); //window
+console.log(this.a); //10
+console.log(window.a); //10 */
 
+var person ={
+    name: 'jhon',
+    age: 25,
+    getName:function(){
+        console.log(this);
+
+    }
+};
+person.getName();
+
+/* function checkThis(){
+    console.log(this);  //window
+
+    console.log(window); //window
+    console.log(this.a); //10
+    console.log(window.a); //10
+
+    console.log(this===window);
+    
+
+}
+checkThis(); */
+
+var john = {
+    name: 'jhon',
+    age: 25,
+    presentation:function(style,message){
+        if(style==='formal'){
+            console.log("hi "+this.name+' good '+message );
+        } else{
+            console.log("hey "+this.name+'  '+message );
+        }
+    }
+};
+//john.presentation('formal','Morning');
+
+var mike = {
+    name: "mike",
+    age:26
+};
+/* john.presentation.call(mike,'friendly','Evening');
+john.presentation.apply(mike,['friendly','Evening']); */
+
+var johnFormal = john.presentation.bind(mike,'formal');
+johnFormal('night');
