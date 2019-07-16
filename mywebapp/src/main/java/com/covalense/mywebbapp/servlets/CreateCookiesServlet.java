@@ -19,7 +19,7 @@ public class CreateCookiesServlet extends HttpServlet {
 		Cookie myNameCookie = new Cookie("myName", "Manoj");
 		Cookie myLocationCookie = new Cookie("myLocation", "Bangalore");
 
-		myLocationCookie.setMaxAge(7*24*60*60); //Time in sec.
+		myLocationCookie.setMaxAge(7*24*60*60); //Time in second.
 		// Send the above cookie to BROWSER.
 		resp.addCookie(myNameCookie);
 		resp.addCookie(myLocationCookie);
