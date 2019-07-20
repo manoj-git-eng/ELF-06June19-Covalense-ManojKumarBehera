@@ -7,37 +7,73 @@
     <title>Document</title>
     <style>
     table{
-        background: rgb(48, 203, 241);
+        background-image: url("https://cdn.pixabay.com/photo/2017/09/26/22/27/triangle-2790346__340.png");
+        box-shadow: 10px;
+        border-radius: 50px;
     }
     button{
         border-radius: 10%;
+        
     }
     input{
         border-radius: 10%;
+        -moz-box-align: center;
     }
-    h2{
-        color: rgb(243, 34, 34);
+    h1{
+        color: seashell;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    th{
+        align-content: flex-end;
+    }
+    body{
+        background-image: url("https://cdn.pixabay.com/photo/2017/10/25/12/17/camera-2887804_960_720.jpg");
     }
     </style>
 </head>
-<body>
+<body><br><br><br><br><br><br>
     <center>
-        <table border="5" cellspacing="0" cellpadding="50">
-            <tr>
-                <td>
-                        <form action="" role="form">
-                               <center><h2>LOG IN</h2></center> <br><br>
-                        
-                                Email:<input onkeyup="validateForm()" type="email" name="email" placeholder="type your email"><br><br><br><br><br>
-                                Password:<input onkeyup="validateForm()" type="password" name="password" placeholder="type password"><br><br><br><br><br>
-                               Confirm Password:<input onkeyup="validateForm()"  type="password" name="confirmpassword" placeholder="retype password"><br><br><br><br>
-                               <button type="reset">Reset</button>
-                               <button type="submit" name="myButton" id="" disabled>Submit</button>
-                              
-                        
-                            </form>
-                </td>
+            <h1>LOG IN</h1>
+        <table border="0"  cellpadding="40">
+                <form action="" role="form">
+                        <tr>
+                            <th>Email:</th>
+                            <td><input onkeyup="validateForm()" type="email" name="email" placeholder=" type your email"></td>
+
+                        </tr>
+                        <tr>
+                            <th>
+                                    Password:
+                            </th>
+                            <td>
+                                    <input onkeyup="validateForm()" type="password" name="password" placeholder=" type password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                    Confirm Password:
+                            </th>
+                            <td>
+                                    <input onkeyup="validateForm()"  type="password" name="confirmpassword" placeholder=" retype password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                    <button><a href="http://www.google.com/">CREATE NEW ACCOUNT</a></button>
+                                    <button type="reset">RESET</button>
+                                    <button type="submit" name="myButton" id="" disabled>SUBMIT</button>
+
+                            </td>
+                               
+
+                        </tr>
+
+                
             </tr>
+        </form>
         </table>
     </center>
     <script src="form.js"></script>

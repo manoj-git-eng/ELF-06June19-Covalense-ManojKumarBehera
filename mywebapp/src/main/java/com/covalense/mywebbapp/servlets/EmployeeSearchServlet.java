@@ -15,10 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 import com.covalense.mywebapp.beans.EmployeeInfoBean;
 import com.covalense.mywebapp.dao.EmployeeDAO;
 import com.covalense.mywebapp.dao.EmployeeDAOFactory;
-@WebServlet(urlPatterns = "/search", initParams = { 
-		@WebInitParam(name = "actress", value = "basanti") 
-		}
-)
+
+@WebServlet(urlPatterns = "/search", initParams = { @WebInitParam(name = "actress", value = "basanti") })
 //@WebServlet("/search/employeeSearch")
 public class EmployeeSearchServlet extends HttpServlet {
 	@Override
@@ -26,8 +24,6 @@ public class EmployeeSearchServlet extends HttpServlet {
 
 		ServletContext ctx = getServletContext();
 		String movieName = ctx.getInitParameter("movie");
-		
-		
 
 		ServletConfig config = getServletConfig();
 		String actorName = config.getInitParameter("actor");
@@ -44,19 +40,19 @@ public class EmployeeSearchServlet extends HttpServlet {
 		if (bean == null) {
 			out.print("<HTML>");
 			out.print("<BODY>");
-			out.print("employee not found");
+			out.print("EmployeeInfo not found");
 			out.print("</BODY>");
 			out.print("</HTML>");
 		} else {
 			out.print("<HTML>");
 			out.print("<BODY>");
-			out.print("<H1><span style=\"color:green\"> Employee Found ....</span></H1>");
+			out.print("<H1><span style=\"color:green\"> EmployeeInfo Found ....</span></H1>");
 			out.print("<br>");
 			out.print("<br> ID : " + bean.getId());
 			out.print("<br> Name :" + bean.getName());
 			out.print("<br> Age :" + bean.getAge());
-			out.print("<br> DOB :" + bean.getDateOfBirth());
 			out.print("<br> Gender :" + bean.getGender());
+			out.print("<br> DOB :" + bean.getDateOfBirth());
 			out.print("<br> Phone No :" + bean.getPhnum());
 			out.print("<br> Joining Date :" + bean.getJoiningDate());
 			out.print("<br> Acc no :" + bean.getAccountNumber());
@@ -67,6 +63,31 @@ public class EmployeeSearchServlet extends HttpServlet {
 			out.print("<br> Movie name :" + movieName);
 			out.print("<br> Actor name :" + actorName);
 			out.print("<br> Email :" + bean.getEmail());
+
+			out.print("</BODY>");
+			out.print("</HTML>");
+
+		}
+
+		// Get the object from Forward servlet.
+		//EmployeeInfoBean empInfo = (EmployeeInfoBean) req.getAttribute("info");
+
+		EmployeeInfoBean employeeInfoBean=(EmployeeInfoBean) ctx.getAttribute("info");
+		if (bean == null) {
+			out.print("<HTML>");
+			out.print("<BODY>");
+			out.print("EmployeeInfoBean object not found");
+			out.print("</BODY>");
+			out.print("</HTML>");
+		} else {
+			out.print("<HTML>");
+			out.print("<BODY>");
+			out.print("<H1><span style=\"color:green\"> EmployeeInfoBean object Found ....</span></H1>");
+			out.print("<br>");
+			out.print("<br> ID : " + bean.getId());
+			out.print("<br> Name :" + bean.getName());
+			out.print("<br> Age :" + bean.getAge());
+			out.print("<br> Gender :" + bean.getGender());
 			out.print("</BODY>");
 			out.print("</HTML>");
 

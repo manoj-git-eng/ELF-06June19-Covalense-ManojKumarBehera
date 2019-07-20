@@ -1,8 +1,9 @@
-function mouseoverPass(obj) {
+function changeImgOnClick1(obj) {
     var obj = document.getElementById('myPassword');
     obj.type = "text";
   }
-  function mouseoutPass(obj) {
+  function changeImgOnClick2(obj) {
     var obj = document.getElementById('myPassword');
     obj.type = "password";
+    
   }

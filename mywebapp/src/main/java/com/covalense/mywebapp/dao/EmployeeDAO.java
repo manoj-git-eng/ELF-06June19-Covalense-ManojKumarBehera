@@ -11,6 +11,9 @@ public interface EmployeeDAO {
 	EmployeeInfoBean getEmployeeInfo(String id);
 
 	EmployeeInfoBean getEmployeeInfo(int id);
+	
+	
+	
 
 	boolean createEmpInfo(EmployeeInfoBean bean);
 

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<style>
+table {
+	background-image:
+		url("https://cdn.pixabay.com/photo/2017/09/26/22/27/triangle-2790346__340.png");
+	box-shadow: 10px;
+	border-radius: 50px;
+}
+
+button {
+	border-radius: 10%;
+}
+
+input {
+	border-radius: 10%;
+	-moz-box-align: center;
+}
+
+h1 {
+	color: seashell;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+th {
+	align-content: flex-end;
+}
+
+body {
+	background-image:
+		url("https://cdn.pixabay.com/photo/2017/10/25/12/17/camera-2887804_960_720.jpg");
+}
+</style>
+</head>
+<body>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<center>
+		<h1>LOG IN</h1>
+		<table border="0" cellpadding="40">
+			<form action="" role="form">
+				<tr>
+					<th>Email:</th>
+					<td><input onkeyup="validateForm()" type="email" name="email"
+						placeholder=" type your email"></td>
+
+				</tr>
+				<tr>
+					<th>Password:</th>
+					<td><input onkeyup="validateForm()" type="password"
+						name="password" id="myPassword" placeholder=" type password">
+						<span class="glyphicon glyphicon-eye-open"><img
+							width="20px" height="20px"
+							src="https://cdn3.iconfinder.com/data/icons/show-and-hide-password/100/show_hide_password-07-512.png"
+							onclick="changeImgOnClick1();" onmouseout="changeImgOnClick2();" /></span>
+
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2">Don't have Account?
+						<button>
+							<a href="http://localhost/emp/empinfo.html">SIGN UP</a>
+						</button> <!--  &nbsp;&nbsp;&nbsp;&nbsp; -->
+
+
+					</td>
+					<th>
+
+						<button type="reset">RESET</button>
+						<button type="submit" name="myButton" id="" disabled>
+							<a href="http://localhost/emp/login">SUBMIT </a>
+						</button>
+					</th>
+
+
+				</tr>
+
+
+				</tr>
+			</form>
+		</table>
+	</center>
+	<script src="login.js"></script>
+</body>
+</html>
