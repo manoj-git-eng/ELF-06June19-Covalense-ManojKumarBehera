@@ -4,11 +4,13 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans 
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<bean id="messageBean" class="com.covalense.springcore.beans.MessageBean">
-<property name="message" value="Welcome to Spring!!!!!"></property>
+<bean id="courseBean" class="com.covalense.springcore.beans.CourseBean">
+<property name="CourseId" value="${CourseId}"></property>
+<property name="CourseName" value="${CourseName}"></property>
+<property name="FacultyName" value="${FacultyName}"></property>
 </bean>
 <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-<property name="location" value="CourseBeanProperty.properties"/>
+<property name="locations" value="CourseBeanProperty.properties"/>
 </bean>
 
 </beans>

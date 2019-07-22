@@ -1,14 +1,20 @@
 package com.covalense.springcore.beans;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import lombok.extern.java.Log;
-
-@Log
 public class EmployeeInfoBean {
 	String name;
 	int id;
+	@Autowired
+	private DepartmentBean departmentBean;
+	
+	
+
+	/*
+	 * public EmployeeInfoBean(String name, int id, DepartmentBean departmentBean) {
+	 * super(); this.name = name; this.id = id; this.departmentBean =
+	 * departmentBean; }
+	 */
 
 	public String getName() {
 		return name;
@@ -25,7 +31,7 @@ public class EmployeeInfoBean {
 	public void setId(int id) {
 		this.id = id;
 	}
-	private DepartmentBean departmentBean;
+	
 
 	public DepartmentBean getDepartmentBean() {
 		return departmentBean;
