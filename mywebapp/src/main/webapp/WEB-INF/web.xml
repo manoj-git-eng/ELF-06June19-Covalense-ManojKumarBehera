@@ -3,11 +3,22 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
+
   <display-name>Archetype Created Web Application</display-name>
+  
   <context-param>
   <param-name>movie</param-name>
   <param-value>Sholey</param-value>
   </context-param>
+  
+  <servlet>
+  <servlet-name>myJsp</servlet-name>
+  <jsp-file>/MyFirstJSP.jsp</jsp-file>
+  </servlet>
+  
+ 
+  
+  
   <servlet>
   <servlet-name>EmployeeSearchServlet</servlet-name>
   <servlet-class>com.covalense.mywebbapp.servlets.EmployeeSearchServlet</servlet-class>
@@ -45,6 +56,11 @@
   <servlet-mapping>
   	<servlet-name>IncludeServlet</servlet-name>
   	<url-pattern>/IncludeServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet-mapping>
+  	<servlet-name>myJsp</servlet-name>
+  	<url-pattern>/currentDateJSP</url-pattern>
   </servlet-mapping>
   <!-- <servlet-mapping>
    <servlet-name>EmployeeSearchServlet</servlet-name>
