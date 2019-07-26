@@ -1,20 +1,32 @@
-package com.covalense.mywebapp.beans;
+package com.covalense.emp.beans;
 
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.Data;
+
+
 
 @Data
 @Entity
 @Table(name = "employee_info")
 public class EmployeeInfoBean implements Serializable {
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinTable(name="employees_others_info", joinColumns = @JoinColumn(name="id"),
+	inverseJoinColumns = @JoinColumn(name="id"))
 
+	
+	private EmployeeOtherInfoBean otherinfo;
 	@Id
 	@Column(name = "Id")
 	private int id;
@@ -43,7 +55,6 @@ public class EmployeeInfoBean implements Serializable {
 	@Column(name = "Manager_Id")
 	private String managerId;
 	@Column(name = "Password")
-	private int password;
-	
+	private String password;
 
 }
