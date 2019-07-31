@@ -13,7 +13,7 @@ public class DeleteData {
 	public static void main(String[] args) {
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session = sessionFactory.openSession();
-		String hql = "DELETE from coustomer where id=1;";
+		String hql = "update from CoustomerBean set Name='\"+args[0]+\"' where Id=\"+args[1]+\"\"";
 		Query query = session.createQuery(hql);
 
 		Transaction txn = null;

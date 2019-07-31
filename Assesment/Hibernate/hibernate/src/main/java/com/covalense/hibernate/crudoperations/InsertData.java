@@ -14,7 +14,7 @@ public class InsertData {
 	public static void main(String[] args) {
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session = sessionFactory.openSession();
-		String hql = " insert into ? ? ? ? ? ? ? ? ";
+		String hql = " insert into coustomer(id,firstName,lastName,contactNumber,address,city,state,country) select id firstName lastName contactNumber address city state country from CoustomerBean where Id=3";
 		Query query = session.createQuery(hql);
 
 		Transaction txn = null;
