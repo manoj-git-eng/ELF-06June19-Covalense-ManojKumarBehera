@@ -13,7 +13,7 @@ function startTimer() {
     document.getElementById(notifier).innerHTML = str;
   }
         
-  function toMinuteAndSecond( x/60 ) {
+  function toMinuteAndSecond( x ) {
     return Math.floor(x/60) + ":" + x%60;
   }
         
