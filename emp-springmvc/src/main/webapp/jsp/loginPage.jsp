@@ -16,6 +16,8 @@
 	crossorigin="anonymous">
 </head>
 <body style="background: rgb(3, 163, 255);">
+${emp}
+${logout}
 <center>
 
 

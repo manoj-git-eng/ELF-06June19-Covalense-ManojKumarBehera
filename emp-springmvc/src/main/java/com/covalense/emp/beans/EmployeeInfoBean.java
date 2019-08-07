@@ -13,20 +13,16 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.Data;
+import lombok.ToString;
 
 
 
 @Data
 @Entity
+@ToString
 @Table(name = "employee_info")
 public class EmployeeInfoBean implements Serializable {
-	
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinTable(name="employees_others_info", joinColumns = @JoinColumn(name="id"),
-	inverseJoinColumns = @JoinColumn(name="id"))
 
-	
-	private EmployeeOtherInfoBean otherinfo;
 	@Id
 	@Column(name = "Id")
 	private int id;

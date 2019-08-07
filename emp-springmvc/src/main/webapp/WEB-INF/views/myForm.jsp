@@ -18,7 +18,8 @@
 <!-- <form action="./submitForm3" method="post"> -->
 <!-- <form action="./submitForm4" method="post"> -->
 <!-- <form action="./submitForm5" method="post"> -->
-<form action="./submitForm6" method="post">
+<!-- <form action="./submitForm6" method="post"> -->
+<form action="./formSubmit" method="post">
 USER ID: <input type="text" name="userId"/><br>
 PASSWORD: <input type="password" name="password"/>
 <br>

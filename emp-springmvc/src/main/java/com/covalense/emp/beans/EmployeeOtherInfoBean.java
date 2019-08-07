@@ -11,15 +11,13 @@ import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 import lombok.Data;
+import lombok.ToString;
 
 @Entity
 @Data
 @Table(name = "employee_other_info")
-
+@ToString
 public class EmployeeOtherInfoBean implements Serializable {
-	@OneToOne(cascade=CascadeType.ALL)
-	
-	
 	
 	@Id
 	@Column(name = "Id")

@@ -7,7 +7,6 @@ import com.covalense.emp.beans.EmployeeInfoBean;
 
 
 public interface EmployeeDAO {
-	List<EmployeeInfoBean> getAllEmployeeInfo();
 
 	List<EmployeeInfoBean> getEmployeeListInfo(String id);
 
