@@ -1,13 +1,13 @@
 package com.covalense.emp.dao;
 
-public class EmployeeDAOFactory {
+public class EmployeeDAOFactoryOld {
 
-	private static String dbInstancetype = "hibernate";
+	//private static String dbInstancetype = "msg1";
 
-	private EmployeeDAOFactory() {
+	private EmployeeDAOFactoryOld() {
 	}
 
-	public static EmployeeDAO getInstance() {
+	public static EmployeeDAO getInstance(String  dbInstancetype) {
 		EmployeeDAO dao = null;
 		if (dbInstancetype.equals("jdbc")) {
 			dao = null;

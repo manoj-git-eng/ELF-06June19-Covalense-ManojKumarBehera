@@ -8,7 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/")
-public class EmployeeController {
+public class EmployeeController1 {
 	@RequestMapping(path = "/getMessage", method = RequestMethod.GET)
 	public ModelAndView getMessage() {
 		ModelAndView modelAndview = new ModelAndView();
