@@ -8,7 +8,7 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.covalense.emp.beans.EmployeeInfoBean;
+import com.covalense.emp.dto.EmployeeInfoBean;
 
 import lombok.extern.java.Log;
 
@@ -76,7 +76,7 @@ public class EmployeeDAOHibernateImpl2 implements EmployeeDAO {
 			return true;
 		} catch (Exception e) {
 			txn.rollback();
-			e.printStackTrace();
+			log.info("Exception");
 			return false;
 		}
 	}

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.covalense.emp.beans.EmployeeInfoBean;
+import com.covalense.emp.dto.EmployeeInfoBean;
 import static com.covalense.emp.common.EmpCommons.VIEW_HOMEPAGE;
 import static com.covalense.emp.common.EmpCommons.VIEW_LOGINPAGE;
 import com.covalense.emp.dao.EmployeeDAO;
@@ -37,7 +37,8 @@ public class LoginController {
 
 		EmployeeInfoBean bean = dao.getEmployeeInfo(id);
 
-		if (bean != null && bean.getPassword().equals(password)) {
+
+		if (bean!=null || bean.getPassword().equals(password)) {
 			HttpSession session = req.getSession(true);
 			req.setAttribute("bean", bean);
 			return VIEW_HOMEPAGE;

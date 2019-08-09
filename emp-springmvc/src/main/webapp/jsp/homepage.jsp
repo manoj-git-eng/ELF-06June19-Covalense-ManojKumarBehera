@@ -1,5 +1,5 @@
 <%@page import="com.covalense.emp.dao.*"%>
-<%@page import="com.covalense.emp.beans.*"%>
+<%@page import="com.covalense.emp.dto.*"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -147,12 +147,12 @@
 								<tr>
 									<th scope="row">12</th>
 									<td>DEPT_NO</td>
-									<td>${bean.departmentId}</td>
+									<td>${bean.deptId}</td>
 								</tr>
 								<tr>
 									<th scope="row">13</th>
 									<td>MGR_ID</td>
-									<td>${bean.managerId}</td>
+									<td>${bean.mngrId}</td>
 								</tr>
 							</tbody>
 						</table>

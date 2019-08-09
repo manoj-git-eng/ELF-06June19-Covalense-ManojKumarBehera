@@ -50,7 +50,7 @@ ${logout}
 					</div>
 					<div class="text-center col-sm-12"
 					style="margin-top: 10px; margin-bottom: 10px;">
-					<a href="./create"
+					<a href="../employee/create"
 						style="text-align: center; margin: 10px;" class="btn btn-primary"
 						type="button"><small>Create Account</small></a> <a
 						href="forgotpassword.jsp" class="btn btn-primary"

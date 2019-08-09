@@ -1,37 +1,38 @@
-package com.covalense.emp.beans;
+package com.covalense.emp.dto;
 
 import java.io.Serializable;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 import lombok.Data;
 import lombok.ToString;
 
-@Entity
+@SuppressWarnings("serial")
 @Data
-@Table(name = "employee_other_info")
+@Entity
 @ToString
+@Table(name = "employees_others_info")
 public class EmployeeOtherInfoBean implements Serializable {
-	
 	@Id
-	@Column(name = "Id")
-	private int id;
+	@OneToOne
+	@JoinColumn(name = "Id")
+	// @PrimaryKeyJoinColumn(name="Id")
+	private EmployeeInfoBean infoBean;
 	@Column(name = "Pan")
 	private String pan;
 	@Column(name = "Ismarried")
-	private boolean ismarried;
+	private Boolean ismarried;
 	@Column(name = "Blood_Group")
 	private String blood;
 	@Column(name = "Ischallenged")
-	private boolean ischallenged;
+	private Boolean ischallenged;
 	@Column(name = "Emergency_contact_number")
-	private long econact;
+	private Long econact;
 	@Column(name = "Nationality")
 	private String nationality;
 	@Column(name = "Religion")
@@ -43,9 +44,8 @@ public class EmployeeOtherInfoBean implements Serializable {
 	@Column(name = "Spouse_name")
 	private String sname;
 	@Column(name = "Passport")
-	private long passport;
+	private Long passport;
 	@Column(name = "Aadhar")
-	private long aadhar;
+	private Long aadhar;
 
-	
 }

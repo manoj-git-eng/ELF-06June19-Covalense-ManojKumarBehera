@@ -2,7 +2,7 @@ package com.covalense.emp.dao;
 
 import java.util.List;
 
-import com.covalense.emp.beans.EmployeeInfoBean;
+import com.covalense.emp.dto.EmployeeInfoBean;
 
 
 
