@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
@@ -87,7 +88,7 @@ public class EmployeeInfoBean implements Serializable {
 	@Column(name = "Date_Of_Birth")
 	private Date dateOfBirth;
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "departmentId", referencedColumnName = "dept_Id")
 	private DepartmentInfoBean departmentInfoBean;
 
@@ -97,7 +98,7 @@ public class EmployeeInfoBean implements Serializable {
 	// @Column(name = "Manager_Id")
 	// private String managerId;
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
 	@JoinColumn(name = "Manager_Id", referencedColumnName = "Id")
 	private EmployeeInfoBean mngrId;
 

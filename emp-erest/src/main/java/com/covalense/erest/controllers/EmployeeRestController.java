@@ -72,7 +72,7 @@ public class EmployeeRestController implements Serializable {
 		return response;
 	} //End of addEmployee.
 
-	@PutMapping(path="/update", produces = MediaType.APPLICATION_JSON_VALUE)
+	@PutMapping(path="/updateEmployee", produces = MediaType.APPLICATION_JSON_VALUE)
 	public EmployeeResponse updateEmployee(@RequestBody EmployeeInfoBean bean) {
 		EmployeeResponse response=new EmployeeResponse(); 
 		if (dao.updateEmployeeInfo(bean)) {

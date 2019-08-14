@@ -45,11 +45,13 @@ public class EmployeeDAOHibernateImpl2 implements EmployeeDAO {
 	}
 
 	public boolean deleteEmployeeInfo(int id) {
+		
 		Transaction txn = null;
 		try {
-			EmployeeInfoBean bean = new EmployeeInfoBean();
-			bean.setId(id);
+			//EmployeeInfoBean bean = new EmployeeInfoBean();
+			//bean.setId(id);
 			Session session = sessionFactory.openSession();
+			EmployeeInfoBean bean=getEmployeeInfo(id);
 			txn = session.beginTransaction();
 			session.delete(bean);
 			txn.commit();
