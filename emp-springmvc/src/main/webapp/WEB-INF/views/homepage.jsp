@@ -1,4 +1,4 @@
-<%@page import="com.covalense.emp.dao.*"%>
+<%@page import="com.covalense.emprest.dao.*"%>
 <%@page import="com.covalense.emp.beans.*"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
