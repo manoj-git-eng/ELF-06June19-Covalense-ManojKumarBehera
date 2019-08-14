@@ -1,7 +1,11 @@
-<%@page import="com.covalense.emprest.dao.*"%>
-<%@page import="com.covalense.emprest.dto.*"%>
+<%@page import="org.springframework.web.servlet.support.ServletUriComponentsBuilder"%>
+<%@page import="com.covalense.emp.dao.*"%>
+<%@page import="com.covalense.emp.dto.*"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%
+    String baseURL = ServletUriComponentsBuilder.fromCurrentContextPath().build().toUriString();
+    %>
 <!DOCTYPE html>
 <html lang='en'>
 
@@ -36,7 +40,7 @@
 					<div class='col-md-12'>
 						<div class='search input-group' data-initialize='search'
 							role='search' id='search'>
-							<form action="./validator/validate/employee/search">
+							<form action="<%=baseURL%>/validator/validate/employee/search">
 							<input type='text' name="search" class='form-control'
 								aria-label='Sizing example input'
 								aria-describedby='inputGroup-sizing-default'> <span
@@ -78,7 +82,7 @@
 				<div id="collapseOne" class="collapse show"
 					aria-labelledby="headingOne" data-parent="#accordionExample">
 					<div class="card-body">
-					<% EmployeeInfoBean bean=(EmployeeInfoBean)request.getAttribute("bean"); %>
+					<%EmployeeInfoBean bean=(EmployeeInfoBean)request.getAttribute("bean");%>
 
 						<table class="table table-hover">
 							<thead>
@@ -147,12 +151,12 @@
 								<tr>
 									<th scope="row">12</th>
 									<td>DEPT_NO</td>
-									<td>${bean.deptId}</td>
+									<td></td>
 								</tr>
 								<tr>
 									<th scope="row">13</th>
 									<td>MGR_ID</td>
-									<td>${bean.mngrId}</td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
@@ -198,7 +202,7 @@
 									<tbody style="font: 56px;">
 										<tr scope="row">
 											<th>PAN</th>
-											<td>${otherInfoBean.pan}</td>
+											<td>${employeeOtherInfoBean.pan}</td>
 										</tr>
 										<tr scope="row">
 											<th>ADHAR</th>

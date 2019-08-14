@@ -80,7 +80,7 @@ public class EmployeeInfoBean implements Serializable {
 	// @Column(name = "Manager_Id")
 	// private String managerId;
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "Manager_Id", referencedColumnName = "Id")
 	private EmployeeInfoBean mngrId;
 

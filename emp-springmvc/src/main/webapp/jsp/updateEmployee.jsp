@@ -1,9 +1,9 @@
 <%@page import="java.util.List"%>
-<%@page import="com.covalense.emprest.dto.EmployeeExperienceInfoBean"%>
-<%@page import="com.covalense.emprest.dto.EducationDetailsInfoBean"%>
-<%@page import="com.covalense.emprest.dto.EmployeeAddressInfoBean"%>
+<%@page import="com.covalense.emp.dto.EmployeeExperienceInfoBean"%>
+<%@page import="com.covalense.emp.dto.EducationDetailsInfoBean"%>
+<%@page import="com.covalense.emp.dto.EmployeeAddressInfoBean"%>
 <%@page import="org.hibernate.Session"%>
-<%@page import="com.covalense.emprest.dto.EmployeeInfoBean"%>
+<%@page import="com.covalense.emp.dto.EmployeeInfoBean"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@page session="true"%>
@@ -440,7 +440,7 @@ table {
 											<p class="h3" style="text-align: center;">EMPLOYEE
 												ADDRESS INFORMATION</p>
 											<hr>
-											
+
 											<div class="row">
 
 												<div class="col">
@@ -763,11 +763,11 @@ table {
 
 											</div>
 											<%
-											k++;
-											}
+												k++;
+																				}
 											%>
-											
-											
+
+
 											<!-- <hr>
 											EMPLOYEE EXPERIENCE INFORMATION <input type="button"
 												data-toggle="collapse" data-target="#empExperienceInfo1"
@@ -816,8 +816,8 @@ table {
 														class="form-control btn btn-outline-secondary">reset</button>
 												</div> -->
 
-											</div>
 										</div>
+									</div>
 								</form>
 							</div>
 						</div>
