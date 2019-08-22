@@ -1,0 +1,12 @@
+.cards{
+    height: 440px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: gainsboro;
+    }
+   .data-display{
+       font-size: 20px;
+       font-style: italic;
+       font-weight: 100px
+   }    

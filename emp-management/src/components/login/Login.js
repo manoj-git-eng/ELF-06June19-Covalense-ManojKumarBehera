@@ -1,16 +1,15 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
+import  './Login.css';
+
 import Axios from 'axios';
-import  './login.css';
-import Navbar from '../navbar/Navbar'
+import HomePage from '../homePage/HomePage'
 import {withRouter} from 'react-router-dom'
 export class Login extends Component {
-
     constructor(props){
        
         super(props)
           this.state={
-                    userId:'',
+                    id:'',
                     password:''
           }
           this.pRef=React.createRef();
@@ -22,7 +21,7 @@ export class Login extends Component {
             Axios.post('http://localhost/emp-erest/login/login',null,
             {
             params:{
-                userId:this.state.userId,
+                id:this.state.id,
                 password:this.state.password
             }
         }).then((response)=>{
@@ -40,10 +39,7 @@ export class Login extends Component {
         }
         render() {
             return (
-                <div>
-                 <Navbar/>
-
-<div className="container">
+                <div className="container">
                     <br></br>
                     <p  ref={this.pRef} align='center' style={{color:'red',visibility:'hidden'}}><h3>{this.error}</h3></p>
                     <div className="d-flex justify-content-center h-100">
@@ -57,14 +53,14 @@ export class Login extends Component {
                                         <div className="input-group-prepend">
                                             <span className="input-group-text"><i className="fas fa-user"></i></span>
                                         </div>
-                                        <input type="text" className="form-control" value={this.state.userId} placeholder="userID" onChange={(event)=>{this.setState({id:event.target.value})}}/>
+                                        <input type="text" className="form-control" value={this.state.id} placeholder="userID" onChange={(event)=>{this.setState({id:event.target.value})}}/>
                                         
                                     </div>
                                     <div className="input-group form-group">
                                         <div className="input-group-prepend">
                                         <span className="input-group-text"><i className="fas fa-key"></i></span>
                                         </div>
-                                        <input type="password" value={this.state.password} className="form-control" placeholder="password"/>
+                                        <input type="password" className="form-control" placeholder="password"/>
                                     </div>
                                     <div className="form-group">
                                         <input type="submit" value="Login" onClick={this.onSubmit.bind(this)} className="btn float-right login_btn"/>
@@ -80,9 +76,7 @@ export class Login extends Component {
                         </div>
                     </div>
                 </div>
-</div>
-
-            
+              
             )
         }
     }
