@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import {withRouter} from 'react-router-dom'
 
 
-class Navbar extends Component {
+class DNavbar extends Component {
   openUser(event){
     event.preventDefault();
     this.props.history.push('/search')
@@ -33,28 +33,7 @@ class Navbar extends Component {
 <div class="collapse navbar-collapse" id="collapsibleNavbar">
 <ul class="navbar-nav ml-auto">
 <Link to="/defaulthome" class="nav-item dropdown">
-<button class="dropbtn">Home</button>
-</Link>
-<li class="nav-item dropdown">
-<button class="dropbtn">Find Books</button>
-<div class="dropdown-content">
-<Link to="/search" class="dropdown-item" >Find by Name</Link>
-<Link to="/search" class="dropdown-item">Find by Id</Link>
-<Link to="/search" class="dropdown-item" >Find by Author</Link>
-</div>
-</li>
-<Link to="/upcoming" class="nav-item dropdown">
-<button class="dropbtn">Upcoming Books</button>
-</Link>
-
-<Link class="nav-item dropdown" to="/login">
-<button class="dropbtn">Login</button>
-</Link>
-<Link to="/contact" class="nav-item dropdown">
-<button class="dropbtn">Contact</button>
-</Link>
-<Link to="/about" class="nav-item dropdown">
-<button class="dropbtn">About us</button>
+<button class="dropbtn">Log out</button>
 </Link>
 </ul>
 </div>
@@ -64,4 +43,4 @@ class Navbar extends Component {
     );
 }
 }
-export default withRouter(Navbar)
+export default withRouter(DNavbar)

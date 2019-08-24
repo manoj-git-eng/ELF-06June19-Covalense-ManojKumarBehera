@@ -40,6 +40,7 @@ export class Login extends Component {
         render() {
             return (
                 <div className="container">
+                    <Navbar/>
                     <br></br>
                     <p  ref={this.pRef} align='center' style={{color:'red',visibility:'hidden'}}><h3>{this.error}</h3></p>
                     <div className="d-flex justify-content-center h-100">

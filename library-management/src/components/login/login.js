@@ -1,92 +1,116 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
-import Axios from 'axios';
-import  './login.css';
-import Navbar from '../navbar/Navbar'
+import Axios from 'axios'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import {withRouter} from 'react-router-dom'
+import Navbar from '../navbar/Navbar';
+
+
 export class Login extends Component {
+   constructor(props){
+      super(props);
 
-    constructor(props){
-       
-        super(props)
-          this.state={
-                    userId:'',
-                    password:''
-          }
-          this.pRef=React.createRef();
-          this.error="Login Failed !!!!!"
-        }
-        onSubmit(event){
-            //let accountData=this.state;
-            event.preventDefault();
-            Axios.post('http://localhost/emp-erest/login/login',null,
-            {
-            params:{
+      this.state = {
+          userId : '',
+          password : '',
+          userType : '',
+          errorMessage: ''
+      }
+
+      this.postLoginData = this.postLoginData.bind(this);
+  }
+
+  postLoginData(event) {
+      event.preventDefault();
+      //let accountData = this.state;
+      const {userId,password,userType} = this.state;
+      const loginData = {userId,password,userType};
+    console.log(loginData)
+      if(this.validateLogin(loginData)){
+          //Call the API using Axios and Validate the Employee Login
+          Axios.post('http://localhost:8001/login',null,{
+              params:{
                 userId:this.state.userId,
-                password:this.state.password
-            }
-        }).then((response)=>{
-                console.log('response',response)
-                if(response.data.statuscode===201){
-                    sessionStorage.setItem('user',JSON.stringify(response.data.bean[0]))
-                    console.log('response',response.data.statuscode)
-                    this.props.history.push('/HomePage')
-                }else{
-                    this.pRef.current.style.visibility="visible"
-                }   
-            }).catch((error)=>{
-                console.log('error object',error)
-            })
-        }
-        render() {
-            return (
-                <div>
-                 <Navbar/>
+                  password:this.state.password,
+                  userType : this.state.userType
+              }
+          }).then((response)=>{
+              console.log(response.data);
+              console.log(response.data.statusCode)
+             // this.props.history.push('/Navbar');
+              if(loginData.userType=="Admin"){
+                  this.props.history.push('/AdminHome');
+              } else if(loginData.userType=="Librarian") {
+                this.props.history.push('/LibHome');
+             } else if(loginData.userType=="User") {
+                                this.props.history.push('/UserHome');
+                              } else{
+                                this.props.history.push('/');
+                              }
+          }).catch((error)=>{
+              console.log('Error',error);
+          });
+      }
+  }
 
-<div className="container">
-                    <br></br>
-                    <p  ref={this.pRef} align='center' style={{color:'red',visibility:'hidden'}}><h3>{this.error}</h3></p>
-                    <div className="d-flex justify-content-center h-100">
-                        <div className="card">
-                            <div className="card-header">
-                                <h3>Sign In</h3>
-                            </div>
-                            <div className="card-body">
-                                <form>
-                                    <div className="input-group form-group">
-                                        <div className="input-group-prepend">
-                                            <span className="input-group-text"><i className="fas fa-user"></i></span>
-                                        </div>
-                                        <input type="text" className="form-control" value={this.state.userId} placeholder="userID" onChange={(event)=>{this.setState({id:event.target.value})}}/>
-                                        
-                                    </div>
-                                    <div className="input-group form-group">
-                                        <div className="input-group-prepend">
-                                        <span className="input-group-text"><i className="fas fa-key"></i></span>
-                                        </div>
-                                        <input type="password" value={this.state.password} className="form-control" placeholder="password"/>
-                                    </div>
-                                    <div className="form-group">
-                                        <input type="submit" value="Login" onClick={this.onSubmit.bind(this)} className="btn float-right login_btn"/>
-                                    </div>
-                                </form>
-                                </div>
-                          
-                            <div className="card-footer">
-                                <div className="d-flex justify-content-center links">
-                                    Don't have an account?<a href="/createaccount">Sign Up</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-</div>
+  validateLogin(loginData){
+      let validationSuccess = false;
 
-            
-            )
-        }
+      if(loginData.userId.trim()==="" || loginData.userId.trim()===null){
+          alert('Please enter User Id');
+          document.getElementById("userId").focus();
+          return validationSuccess;
+      } else if(loginData.password.trim()==="" || loginData.password.trim()===null){
+          alert('Please enter Password');
+          document.getElementById("password").focus();
+          return validationSuccess;
+      } else{
+          validationSuccess = true;
+      }
+
+      return validationSuccess;
+  }
+    render() {
+        return (
+           <div > 
+               <Navbar/><hr/><hr/><hr/><hr/>
+
+
+            <div class="sidenav">
+         <div class="login-main-text">
+      </div>
+      </div >
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+               <form onSubmit={this.postLoginData}>
+                  <div class="form-group">
+                     <label>User ID</label>
+                     <input type="text" onChange={(event)=>{this.setState({userId:event.target.value})}} value={this.state.userId} class="form-control" placeholder="User ID"/>
+                  </div>
+                  <div class="form-group">
+                     <label>Password</label>
+                     <input type="password" onChange={(event)=>{this.setState({password:event.target.value})}} value={this.state.password} class="form-control" placeholder="Password"/>
+                  </div>
+                  <div class="form-group">
+                     <label  >User Type</label>
+                     <select id="userType" name="userType" onChange={(event)=>{this.setState({userType:event.target.value})}} value={this.state.userType}>
+                     <option  selected>Choose..</option>
+                    <option  value="Admin">Admin</option>
+                    <option value="Librarian">Librarian</option>
+                    <option  value="User">User</option>
+                    </select>
+                  </div>
+                  
+                  <button  type="submit" class="form-group">Login</button>
+
+               </form>
+            </div>
+         </div>
+      </div>
+      </div>
+      
+        )
     }
-           
-    
-    
-    export default withRouter(Login)
+}
+
+export default  withRouter(Login)

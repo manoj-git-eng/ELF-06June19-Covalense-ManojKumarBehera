@@ -19,35 +19,27 @@ export class Search extends Component {
             return (
               <div>
               <Navbar/>
-    
-
-
-<div class="container">
-     
-        
-        <form action="" method="post">
-            <div class="preview text-center">
-                <br></br> <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
-                <div id="cover">
-  <form method="get" action="">
-    <div class="tb">
-      <div class="td"><input type="text" placeholder="Search" required/></div>
-      <div class="td" id="s-cover">
-        <button type="submit">
-          <div id="s-circle"></div>
-          <span></span>
-        </button>
-      </div>
-    </div>
-  </form>
+              <div class="container">
+    <br/>
+	<div class="row justify-content-center">
+                        <div class="col-12 col-md-10 col-lg-8">
+                            <form class="card card-sm">
+                                <div class="card-body row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <i class="fas fa-search h4 text-body"></i>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search"/>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn btn-lg btn-success" type="submit">Search</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
 </div>
-           </div>
-        </form>
-    </div> 
-	
-</div>
-
-            
+  </div>        
             )
         }
     }
